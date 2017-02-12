@@ -1,0 +1,91 @@
+$main-bg-color: purple;
+$main-color: white;
+@mixin auto-margin($margin){
+    margin-left: $margin;
+    margin-right: $margin;
+}
+body{
+    font-family: calibri;
+
+}
+nav {
+    position: relative;
+    display: block;
+    background: $main-bg-color;
+    font-family: calibri;
+     
+    ul {
+        display: inline-block;
+        padding: 5px;
+       
+        li {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            a {
+                color: $main-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+.Active {
+    color: magenta;
+    font-size: 1.3em;
+}
+
+table { 
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    @include auto-margin(auto);
+    thead {
+        padding: 10px;
+        margin: 10px;
+        tr {
+            padding: 10px;
+            margin: 10px;
+            th {
+                border: 2px solid mediumvioletred;
+                padding: 10px;
+                margin: 10px;
+            }
+        }
+    }
+    tbody {
+         
+        padding: 10px;
+        margin: 10px;
+        tr {
+          
+            padding: 10px;
+            margin: 10px;
+            td {
+                padding: 10px;
+                margin: 10px;
+                
+                 border: 2px solid lavender;
+            }
+        }
+    }
+}
+
+form{
+    display: inline-block;
+   
+    border: 2px solid $main-bg-color;
+    padding: 20px;
+
+    input{
+        display: block;
+        padding: 10px;
+        margin : 10px;
+        border: 1px solid lavender;
+        font-weight: bold;
+        @include auto-margin(auto);
+
+    }
+    @include auto-margin(auto);
+}

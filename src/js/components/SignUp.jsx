@@ -1,14 +1,14 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import {Link} from "react-router";
-// import Nav from "../components/Nav.jsx";
+import {Link, browserHistory} from "react-router";
+
 
 
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users : [],  
+      users : JSON.parse(localStorage.getItem("users")),  
       username: "",
       email: "",
       password: ""
@@ -25,7 +25,6 @@ handleUsername(e){
     this.setState({
         username : username
     });
-    console.log(username);
 
 }
 handleEmail(e){
@@ -33,14 +32,13 @@ handleEmail(e){
     this.setState({
         email : email
     });
-    console.log(email);
+   
 }
 handlePassword(e){
     let password = e.target.value;
     this.setState({
         password : password
     });
-    console.log(password);
 }
 handleSubmit(e){
     e.preventDefault();
@@ -56,17 +54,22 @@ handleSubmit(e){
       if(username === "" || username.indexOf(" ") !== -1 && email === "" || email.indexOf(" ") !== -1 && password === "" || password.indexOf(" ") !== -1 ){
         alert("Enter Your credentials")
     }else{
+         console.log(users);
      users.push(new User(username,email,password));
+     localStorage.setItem("users",JSON.stringify(users));
      this.setState({
          users:users
      });
-     localStorage.setItem("users",JSON.stringify(users));
-     console.log(users);}
+     
+     console.log(users);
+     browserHistory.push('/signin');
+    }
       this.setState({
         username :"",
         email:"",
         password : ""
     });
+    
 }
 
 

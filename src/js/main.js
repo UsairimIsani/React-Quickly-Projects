@@ -7,7 +7,7 @@ import Nav from "./components/Nav.jsx";
 import Home from "./components/Home.jsx";
 import Excel from "./components/Excel.jsx";
 import SignUp from "./components/SignUp.jsx";
-
+import SignIn from "./components/SignIn.jsx";
 
 export default class Main extends Component {
   constructor(props) {
@@ -50,6 +50,7 @@ ReactDOM.render(
     <Route path={"/"} component={Main}>
       <Route path={"home"} component={Home}></Route>
       <Route path={"excel"} component={Excel}></Route>
+      <Route path={"signin"} component={SignIn}></Route>
       <Route path={"signup"} component={SignUp}></Route>
     </Route>
   

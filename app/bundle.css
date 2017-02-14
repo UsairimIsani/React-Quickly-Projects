@@ -2,9 +2,67 @@ h1 {
     text-align: center;
     color: red;
     border: 4px solid pink;
-}
+}body {
+  font-family: calibri; }
 
-body {
-    font: 100% Helvetica, sans-serif;
-    color: #333;
-}
+nav {
+  position: relative;
+  display: block;
+  background: purple;
+  font-family: calibri; }
+  nav ul {
+    display: inline-block;
+    padding: 5px; }
+    nav ul li {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px; }
+      nav ul li a {
+        color: white;
+        text-decoration: none; }
+
+.Active {
+  color: magenta;
+  font-size: 1.3em; }
+
+table {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto; }
+  table thead {
+    padding: 10px;
+    margin: 10px; }
+    table thead tr {
+      padding: 10px;
+      margin: 10px; }
+      table thead tr th {
+        border: 2px solid mediumvioletred;
+        padding: 10px;
+        margin: 10px; }
+  table tbody {
+    padding: 10px;
+    margin: 10px; }
+    table tbody tr {
+      padding: 10px;
+      margin: 10px; }
+      table tbody tr td {
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid lavender; }
+
+form {
+  display: inline-block;
+  border: 2px solid purple;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto; }
+  form input {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid lavender;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto; }

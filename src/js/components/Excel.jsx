@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import {Link} from "react-router";
+require("../../css/bootstrap.min.css");
+import Tooltip from "./Tooltip.jsx";
 
 
 
@@ -68,7 +70,7 @@ export default class Excel extends Component {
                         }
                   return (
                     <th key={idx}>{ 
-                           title                                                                                                                          }</th>
+                           <Tooltip text="Click once for Ascending and Twice for Descending">{title}</Tooltip>                                                                                                                          }</th>
                   )
                 }, this)}
             </tr>

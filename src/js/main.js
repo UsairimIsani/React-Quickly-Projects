@@ -3,11 +3,15 @@ import ReactDOM from "react-dom";
 import { Router, Route , IndexRoute ,browserHistory, Link} from "react-router";
 require("../css/main.css");
 require("../css/main.scss");
+require("../css/bootstrap.min.css");
 import Nav from "./components/Nav.jsx";
 import Home from "./components/Home.jsx";
 import Excel from "./components/Excel.jsx";
 import SignUp from "./components/SignUp.jsx";
 import SignIn from "./components/SignIn.jsx";
+import Timer from "./components/Timer.jsx";
+import Tooltip from "./components/Tooltip.jsx";
+
 
 export default class Main extends Component {
   constructor(props) {
@@ -28,8 +32,9 @@ export default class Main extends Component {
             <li>
               <Link to="/excel" activeClassName="Active">Excel</Link>
             </li>
-          </ul>
-          <ul >
+          <li>
+              <Link to="/timer" activeClassName="Active">Timer</Link>
+            </li>
             <li>
               <Link to="/signin" activeClassName="Active">Sign In</Link>
             </li>
@@ -38,8 +43,16 @@ export default class Main extends Component {
             </li>
           </ul>
         </nav>
-       
-        {this.props.children}
+      <div id="tooltips">
+        <div>
+          <Tooltip text="A tooltip HAHAHAH">This is A tooltip</Tooltip> Hahha chicken ki kabab 
+        </div>
+        
+       </div>
+       <div id="Container">
+         {this.props.children}
+       </div>
+        
      </div>    
     );
   }
@@ -50,6 +63,7 @@ ReactDOM.render(
     <Route path={"/"} component={Main}>
       <Route path={"home"} component={Home}></Route>
       <Route path={"excel"} component={Excel}></Route>
+      <Route path={"timer"} component={Timer}></Route>
       <Route path={"signin"} component={SignIn}></Route>
       <Route path={"signup"} component={SignUp}></Route>
     </Route>

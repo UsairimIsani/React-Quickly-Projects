@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import {Link, browserHistory} from "react-router";
-
+require("../../css/bootstrap.min.css");
 
 
 export default class SignIn extends Component {

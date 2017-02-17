@@ -70,7 +70,8 @@ export default class Excel extends Component {
                         }
                   return (
                     <th key={idx}>{ 
-                           <Tooltip text="Click once for Ascending and Twice for Descending">{title}</Tooltip>                                                                                                                          }</th>
+                          title
+                      }</th>
                   )
                 }, this)}
             </tr>

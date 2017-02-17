@@ -25,7 +25,7 @@ export default class Tooltip extends Component {
       zIndex: (this.state.opacity) ? 1000 : -1000,
       opacity: +this.state.opacity,
       top: (this.state.top || 0) + 25,
-      left: (this.state.left || 0) - 15
+      left: (this.state.left || 0) - 68
 
     }
 

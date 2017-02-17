@@ -26,15 +26,18 @@ nav {
             margin: 10px;
             padding: 10px;
             a {
-                color: $main-color;
-                text-decoration: none;
-                :hover{
                 color: $main-color ;
-                text-decoration: none ;
+                text-decoration: none !important;
+                :hover{
+                color: $main-color !important ;
+                text-decoration: none !important ;
+                }
+                :focus{
+                     text-decoration: none !important; 
                 }
                 :visited{
                 color: $main-color;
-                text-decoration: none;
+                text-decoration: none !important;
                 }
             }
         }

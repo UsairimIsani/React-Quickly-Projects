@@ -30,7 +30,7 @@ render(){
          <div>
               <div>
                     <form  onSubmit={this.handleTimeToCount}> 
-                        <input type="number"  value={this.state.time} onChange={this.handleTime}  placeholder="Enter Your time"/>    
+                        <input type="number"  value={this.state.time} onChange={this.handleTime}  placeholder="Enter Your time" autoFocus/>    
                         <input type="submit" value="Set Time"/>
                     </form>
              

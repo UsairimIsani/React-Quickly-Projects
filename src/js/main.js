@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Router, Route , IndexRoute ,browserHistory, Link} from "react-router";
 require("../css/main.css");
 require("../css/main.scss");
-require("../css/bootstrap.min.css");
+// require("../css/bootstrap.min.css");
 import Nav from "./components/Nav.jsx";
 import Home from "./components/Home.jsx";
 import Excel from "./components/Excel.jsx";
@@ -45,10 +45,11 @@ export default class Main extends Component {
         </nav>
       <div id="tooltips">
         <div>
-          <Tooltip text="A tooltip HAHAHAH">This is A tooltip</Tooltip> Hahha chicken ki kabab 
+          <Tooltip text="This is an Example of Tooltip">Tooltips</Tooltip> are Part of UserInterface
         </div>
         
        </div>
+       
        <div id="Container">
          {this.props.children}
        </div>
@@ -61,6 +62,7 @@ export default class Main extends Component {
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path={"/"} component={Main}>
+    <IndexRoute path={"home"} component={Home}></IndexRoute>
       <Route path={"home"} component={Home}></Route>
       <Route path={"excel"} component={Excel}></Route>
       <Route path={"timer"} component={Timer}></Route>

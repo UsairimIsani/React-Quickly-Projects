@@ -1,11 +1,13 @@
 {
-  "name": "new_reactor",
+  "name": "react_quickly_projects",
   "version": "1.0.0",
-  "description": "New Reactor",
+  "description": "React Projects",
   "main": "src/js/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack-dev-server -progress"
+    "start": "run b-s",
+    "build": "webpack",
+    "build-prod": "webpack -p",
+    "b-s":"webpack-dev-server"
   },
   "keywords": [
     "React",
